@@ -10,7 +10,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?acce
 }).addTo(myMap);
 
 // Load URL for geojson and get request
-var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
+var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
 
 d3.json(url, function(data){
   console.log(data)
@@ -21,13 +21,13 @@ d3.json(url, function(data){
     var color = '';
     switch(true){
       case (depth > -10 && depth < 10):
-        color = 'darkviolet';
-        break;
-      case (depth >= 10 && depth < 30):
         color = 'blue';
         break;
-      case (depth >= 30 && depth < 50):
+      case (depth >= 10 && depth < 30):
         color = 'green';
+        break;
+      case (depth >= 30 && depth < 50):
+        color = 'lightgreen';
         break;
       case (depth >= 50 && depth < 70):
         color = 'yellow';
