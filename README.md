@@ -1,6 +1,6 @@
 Part 1: Create the Earthquake Visualization (leaflet-challenge) README
 This is a repository for the leaflet-challenge for Northwestern/edX bootcamps
-
+https://rachelpaczki.github.io/leaflet-challenge/
 
 Your first task is to visualize an earthquake dataset. Complete the following steps:
 
